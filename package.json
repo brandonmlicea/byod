@@ -1,0 +1,36 @@
+{
+	"name": "byod",
+	"version": "1.0.0",
+	"description": "BYOD: bring your own domain. Agent mailboxes on a domain you own, through a Cloudflare Worker you own, for Claude Code or any MCP client.",
+	"type": "module",
+	"bin": {
+		"byod": "src/index.js"
+	},
+	"files": [
+		"src",
+		"worker/index.js",
+		"worker/read.js",
+		"worker/wrangler.jsonc"
+	],
+	"scripts": {
+		"test": "node test/check.mjs",
+		"e2e": "node test/e2e.mjs"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"license": "MIT",
+	"repository": "github:brandonmlicea/byod",
+	"keywords": [
+		"mcp",
+		"claude-code",
+		"email",
+		"mailbox",
+		"cloudflare",
+		"email-routing",
+		"agents"
+	],
+	"dependencies": {
+		"postal-mime": "4.2.0"
+	}
+}
